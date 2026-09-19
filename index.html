@@ -328,10 +328,21 @@
                 (pos) => {
                     const lat = pos.coords.latitude;
                     const lng = pos.coords.longitude;
+                    const acc = Math.round(pos.coords.accuracy || 0);
                     document.getElementById('tma-lat').value = lat;
                     document.getElementById('tma-lng').value = lng;
-                    document.getElementById('tma-gps-alert').classList.remove('hidden');
-                    document.getElementById('tma-gps-status').innerText = `📍 GPS ተመዝግቧል (${lat.toFixed(4)}, ${lng.toFixed(4)})`;
+                    
+                    const alertBox = document.getElementById('tma-gps-alert');
+                    alertBox.classList.remove('hidden');
+                    
+                    if (acc > 1000) {
+                        alertBox.className = 'mb-2 p-2.5 rounded-xl bg-amber-950/80 border border-amber-500/40 text-amber-200 text-[11px] flex items-center justify-between';
+                        document.getElementById('tma-gps-status').innerHTML = `⚠️ በኮምፒውተር/IP የተገመተ መገኛ (±${(acc/1000).toFixed(1)}km): እባክዎ ሰፈርዎን ይምረጡ`;
+                    } else {
+                        alertBox.className = 'mb-2 p-2.5 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-[11px] flex items-center justify-between';
+                        document.getElementById('tma-gps-status').innerHTML = `✅ ትክክለኛ የሞባይል GPS ተገኝቷል (±${acc}m)`;
+                    }
+
                     document.getElementById('tma-gps-link').href = `https://www.google.com/maps?q=${lat},${lng}`;
                     btn.innerText = '✅ ተገኝቷል';
                     lucide.createIcons();
