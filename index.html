@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ሜአሽ የፅዳት አገልግሎት | Telegram Mini App</title>
+    <title>ሜሽ የፅዳት አገልግሎት | Telegram Mini App</title>
     <!-- Telegram WebApp SDK -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <!-- Tailwind CSS -->
@@ -23,11 +23,9 @@
         <!-- Header & Language Toggle -->
         <div class="flex items-center justify-between gap-3 mb-5 p-3.5 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shrink-0 shadow-md shadow-cyan-500/20">
-                    <i data-lucide="sparkles" class="w-5 h-5"></i>
-                </div>
+                <img src="./logo.jpg" alt="Mesh Cleaning Logo" class="w-11 h-11 rounded-xl object-cover border border-cyan-500/40 shadow-md shadow-cyan-500/20 shrink-0">
                 <div>
-                    <h1 class="text-sm font-extrabold text-white tracking-tight" id="txt-app-title">ሜአሽ የፅዳት አገልግሎት</h1>
+                    <h1 class="text-sm font-extrabold text-white tracking-tight" id="txt-app-title">ሜሽ የፅዳት አገልግሎት</h1>
                     <p class="text-[11px] text-cyan-400 font-semibold" id="tg-user-greeting">እንኳን ደህና መጡ 👋</p>
                 </div>
             </div>
@@ -150,7 +148,7 @@
                 <i data-lucide="check-circle-2" class="w-10 h-10"></i>
             </div>
             <h3 class="text-xl font-black text-white mb-2" id="txt-success-title">🎉 ቀጠሮዎ በተሳካ ሁኔታ ተመዝግቧል!</h3>
-            <p class="text-xs text-slate-300 mb-5 leading-relaxed" id="txt-success-desc">የሜአሽ ሪሴፕሽን ሰራተኞቻችን የቡድን ምደባውን በስልክ ደውለው ያረጋግጡልዎታል::</p>
+            <p class="text-xs text-slate-300 mb-5 leading-relaxed" id="txt-success-desc">የሜሽ ሪሴፕሽን ሰራተኞቻችን የቡድን ምደባውን በስልክ ደውለው ያረጋግጡልዎታል::</p>
             <div class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700 mb-6 shadow-md">
                 <span class="text-[11px] font-semibold text-slate-400 block mb-1" id="lbl-tracking-id">የትዕዛዝ መለያ ቁጥር (Order ID)</span>
                 <span class="text-2xl font-black text-cyan-400 tracking-wider" id="tma-result-id">ORD-2026-0001</span>
@@ -171,7 +169,7 @@
 
         const i18nDict = {
             am: {
-                appTitle: 'ሜአሽ የፅዳት አገልግሎት',
+                appTitle: 'ሜሽ የፅዳት አገልግሎት',
                 greetingDefault: 'እንኳን ደህና መጡ 👋',
                 step1: '1. አገልግሎት ይምረጡ',
                 step2: '2. አድራሻ በአዲስ አበባ',
@@ -186,7 +184,7 @@
                 submitBtn: 'ቀጠሮውን አረጋግጥ (Submit Booking)',
                 submitting: 'በመመዝገብ ላይ...',
                 successTitle: '🎉 ቀጠሮዎ በተሳካ ሁኔታ ተመዝግቧል!',
-                successDesc: 'የሜአሽ ሪሴፕሽን ሰራተኞቻችን የቡድን ምደባውን በስልክ ደውለው ያረጋግጡልዎታል::',
+                successDesc: 'የሜሽ ሪሴፕሽን ሰራተኞቻችን የቡድን ምደባውን በስልክ ደውለው ያረጋግጡልዎታል::',
                 trackingId: 'የትዕዛዝ መለያ ቁጥር (Order ID)',
                 closeApp: 'ዝጋ (Close)',
                 currency: 'ብር',
@@ -194,8 +192,8 @@
                 afternoon: 'ከሰዓት (ከ 8:00 - 11:00)',
             },
             en: {
-                appTitle: 'MEASH CLEANING SOLUTION',
-                greetingDefault: 'Welcome to Meash 👋',
+                appTitle: 'MESH CLEANING SOLUTION',
+                greetingDefault: 'Welcome to Mesh 👋',
                 step1: '1. Choose Service',
                 step2: '2. Location in Addis Ababa',
                 step3: '4. Your Contact Details',
